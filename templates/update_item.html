@@ -1,1 +1,11 @@
+<form method="POST" action="/update/{{ description }}">
+	{{ form.hidden_tag() }}
+	{{ form.priority_level.label }} {{ form.priority_level() }}
+	{{ form.submit() }}
+</form>
 
+<div>
+{% for message in get_flashed_messages() %}
+{{ message }}
+{% endfor %}
+</div>
